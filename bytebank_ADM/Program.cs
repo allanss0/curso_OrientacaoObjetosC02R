@@ -73,9 +73,15 @@ void UsarSistema()
     camila1.Nome = "Camila Oliveira";
     camila1.senha = "teste1";
 
+    Auxiliar paula2 = new("987456");
+    paula2.Nome = "Paula Souza";
+   // paula2.senha = "teste1";
+
 
     sistema.Logar(camila1, "teste11");
     sistema.Logar(paula1, "teste1");
+
+   // sistema.Logar(paula2, "teste11");
 }
 
 
