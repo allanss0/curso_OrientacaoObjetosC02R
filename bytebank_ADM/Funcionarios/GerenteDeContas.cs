@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace bytebank_ADM.Funcionarios
 {
-    public class GerenteDeContas:Autenticavel
-    {       
+    public class GerenteDeContas:Funcionario, Autenticavel
+    {
+        string Autenticavel.Senha { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         public GerenteDeContas(string cpf) : base(cpf,4000)
         {
@@ -23,6 +24,9 @@ namespace bytebank_ADM.Funcionarios
             this.Salario *= 1.05;
         }
 
-
+        bool Autenticavel.Autenticar(string senha)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

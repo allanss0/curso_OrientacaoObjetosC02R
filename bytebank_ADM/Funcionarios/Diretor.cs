@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace bytebank_ADM.Funcionarios
 {
-    public class Diretor: Autenticavel
-    { 
+    public class Diretor: Funcionario, Autenticavel
+    {
+        public string Senha { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         public override double GetBonificacao()
         {
@@ -25,6 +26,10 @@ namespace bytebank_ADM.Funcionarios
             this.Salario *= 1.15; 
         }
 
+        public bool Autenticar(string senha)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     

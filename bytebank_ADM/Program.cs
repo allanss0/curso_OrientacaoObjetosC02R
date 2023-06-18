@@ -1,6 +1,8 @@
 ﻿using bytebank_ADM.Funcionarios;
+using bytebank_ADM.Parceria;
 using bytebank_ADM.SistemaInterno;
 using bytebank_ADM.Utilitario;
+using System.Reflection.PortableExecutable;
 
 #region
 //Funcionario pedro = new Funcionario("123456789", 2000);
@@ -75,13 +77,17 @@ void UsarSistema()
 
     Auxiliar paula2 = new("987456");
     paula2.Nome = "Paula Souza";
-   // paula2.senha = "teste1";
+    // paula2.senha = "teste1";
 
+    ParceiroComercial pc1 = new ParceiroComercial();
+    pc1.Senha = "123";
+        
 
     sistema.Logar(camila1, "teste11");
     sistema.Logar(paula1, "teste1");
+    sistema.Logar(pc1, "123");
 
-   // sistema.Logar(paula2, "teste11");
+    // sistema.Logar(paula2, "teste11");
 }
 
 
